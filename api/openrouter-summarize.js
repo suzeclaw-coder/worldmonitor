@@ -25,7 +25,7 @@ export default createSummarizeHandler({
       headers: {
         'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
-        'HTTP-Referer': 'https://worldmonitor.app',
+        'HTTP-Referer': 'https://wm.149.118.144.212.nip.io',
         'X-Title': 'WorldMonitor',
       },
     };

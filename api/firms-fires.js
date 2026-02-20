@@ -28,6 +28,7 @@ const MONITORED_REGIONS = {
   'North Korea':  { bbox: '124,37,131,43' },
   'Saudi Arabia': { bbox: '34,16,56,32' },
   'Turkey':       { bbox: '26,36,45,42' },
+  'Malaysia':     { bbox: '99,0,120,8' },
 };
 
 // Map VIIRS confidence letters to numeric

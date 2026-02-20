@@ -118,7 +118,7 @@ export class LiveNewsPanel extends Panel {
   }
 
   private get embedOrigin(): string {
-    try { return new URL(getRemoteApiBaseUrl()).origin; } catch { return 'https://worldmonitor.app'; }
+    try { return new URL(getRemoteApiBaseUrl()).origin; } catch { return 'https://wm.149.118.144.212.nip.io'; }
   }
 
   private setupBridgeMessageListener(): void {
@@ -146,9 +146,7 @@ export class LiveNewsPanel extends Panel {
   }
 
   private static resolveYouTubeOrigin(): string | null {
-    const fallbackOrigin = SITE_VARIANT === 'tech'
-      ? 'https://worldmonitor.app'
-      : 'https://worldmonitor.app';
+    const fallbackOrigin = 'https://wm.149.118.144.212.nip.io';
 
     try {
       const { protocol, origin, host } = window.location;

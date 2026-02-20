@@ -10,8 +10,8 @@ interface StoryMeta {
   type: 'ciianalysis' | 'crisisalert' | 'dailybrief' | 'marketfocus';
 }
 
-const BASE_URL = 'https://worldmonitor.app';
-const DEFAULT_IMAGE = 'https://worldmonitor.app/favico/og-image.png';
+const BASE_URL = 'https://wm.149.118.144.212.nip.io';
+const DEFAULT_IMAGE = 'https://wm.149.118.144.212.nip.io/favico/og-image.png';
 
 export function updateMetaTagsForStory(meta: StoryMeta): void {
   const { countryCode, countryName, ciiScore, ciiLevel, trend, type } = meta;

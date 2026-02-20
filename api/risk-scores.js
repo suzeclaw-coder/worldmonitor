@@ -22,20 +22,21 @@ const TIER1_COUNTRIES = {
   IL: 'Israel', TW: 'Taiwan', KP: 'North Korea', SA: 'Saudi Arabia', TR: 'Turkey',
   PL: 'Poland', DE: 'Germany', FR: 'France', GB: 'United Kingdom', IN: 'India',
   PK: 'Pakistan', SY: 'Syria', YE: 'Yemen', MM: 'Myanmar', VE: 'Venezuela',
+  MY: 'Malaysia',
 };
 
 // Baseline geopolitical risk (0-50)
 const BASELINE_RISK = {
   US: 5, RU: 35, CN: 25, UA: 50, IR: 40, IL: 45, TW: 30, KP: 45,
   SA: 20, TR: 25, PL: 10, DE: 5, FR: 10, GB: 5, IN: 20, PK: 35,
-  SY: 50, YE: 50, MM: 45, VE: 40,
+  SY: 50, YE: 50, MM: 45, VE: 40, MY: 15,
 };
 
 // Event significance multipliers
 const EVENT_MULTIPLIER = {
   US: 0.3, RU: 2.0, CN: 2.5, UA: 0.8, IR: 2.0, IL: 0.7, TW: 1.5, KP: 3.0,
   SA: 2.0, TR: 1.2, PL: 0.8, DE: 0.5, FR: 0.6, GB: 0.5, IN: 0.8, PK: 1.5,
-  SY: 0.7, YE: 0.7, MM: 1.8, VE: 1.8,
+  SY: 0.7, YE: 0.7, MM: 1.8, VE: 1.8, MY: 1.0,
 };
 
 // Country keywords for matching
@@ -60,6 +61,7 @@ const COUNTRY_KEYWORDS = {
   YE: ['yemen', 'sanaa', 'houthi'],
   MM: ['myanmar', 'burma'],
   VE: ['venezuela', 'caracas', 'maduro'],
+  MY: ['malaysia', 'kuala lumpur', 'putrajaya', 'anwar ibrahim'],
 };
 
 function normalizeCountryName(text) {

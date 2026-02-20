@@ -48,6 +48,7 @@ const MONITORED_ZONES = [
   { name: 'Southern Africa', lat: -25.0, lon: 28.0 },
   { name: 'Central Asia', lat: 42.0, lon: 65.0 },
   { name: 'Caribbean', lat: 19.0, lon: -72.0 },
+  { name: 'Malaysia', lat: 3.1, lon: 101.7 },
 ];
 
 function classifySeverity(tempDelta, precipDelta) {

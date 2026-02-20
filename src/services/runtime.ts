@@ -1,7 +1,7 @@
 const DEFAULT_REMOTE_HOSTS: Record<string, string> = {
   tech: 'https://tech.worldmonitor.app',
-  full: 'https://worldmonitor.app',
-  world: 'https://worldmonitor.app',
+  full: 'https://wm.149.118.144.212.nip.io',
+  world: 'https://wm.149.118.144.212.nip.io',
 };
 
 const DEFAULT_LOCAL_API_BASE = 'http://127.0.0.1:46123';
@@ -82,7 +82,7 @@ export function getRemoteApiBaseUrl(): string {
   }
 
   const variant = import.meta.env.VITE_VARIANT || 'full';
-  return DEFAULT_REMOTE_HOSTS[variant] ?? DEFAULT_REMOTE_HOSTS.full ?? 'https://worldmonitor.app';
+  return DEFAULT_REMOTE_HOSTS[variant] ?? DEFAULT_REMOTE_HOSTS.full ?? 'https://wm.149.118.144.212.nip.io';
 }
 
 export function toRuntimeUrl(path: string): string {
@@ -102,6 +102,7 @@ const APP_HOSTS = new Set([
   'worldmonitor.app',
   'www.worldmonitor.app',
   'tech.worldmonitor.app',
+  'wm.149.118.144.212.nip.io',
   'localhost',
   '127.0.0.1',
 ]);
@@ -110,7 +111,7 @@ function isAppOriginUrl(urlStr: string): boolean {
   try {
     const u = new URL(urlStr);
     const host = u.hostname;
-    return APP_HOSTS.has(host) || host.endsWith('.worldmonitor.app');
+    return APP_HOSTS.has(host) || host.endsWith('.worldmonitor.app') || host === 'wm.149.118.144.212.nip.io';
   } catch {
     return false;
   }
